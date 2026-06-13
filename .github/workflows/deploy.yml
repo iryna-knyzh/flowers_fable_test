@@ -20,6 +20,10 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
+      # Вмикає GitHub Pages із джерелом "GitHub Actions" (не треба ручного
+      # перемикання в Settings → Pages).
+      - uses: actions/configure-pages@v5
+
       - uses: actions/setup-node@v5
         with:
           node-version: 24
