@@ -25,7 +25,10 @@ jobs:
           node-version: 24
           cache: npm
 
-      - run: npm ci
+      # npm install (не ci): lockfile містить вкладені опціональні залежності
+      # (@emnapi для wasm-фолбеку Tailwind oxide), версії яких npm у CI резолвить
+      # інакше, через що суворий `npm ci` падає на неузгодженості lockfile.
+      - run: npm install --no-audit --no-fund
 
       - name: Build static export
         env:
