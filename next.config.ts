@@ -10,7 +10,10 @@ const nextConfig: NextConfig = {
   assetPrefix: basePath || undefined,
   trailingSlash: true,
   images: {
-    unoptimized: true, // GitHub Pages не має сервера оптимізації зображень
+    // GitHub Pages не має сервера оптимізації; кастомний лоадер додає basePath
+    // до шляхів зображень (інакше на project-сайті вони б давали 404).
+    loader: "custom",
+    loaderFile: "./src/image-loader.ts",
   },
 };
 

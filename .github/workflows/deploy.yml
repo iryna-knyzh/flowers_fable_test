@@ -34,6 +34,8 @@ jobs:
         env:
           # Назва репозиторію → шлях, з якого GitHub Pages віддає project-сайт.
           BASE_PATH: /${{ github.event.repository.name }}
+          # Той самий префікс для кастомного лоадера зображень (інлайниться в клієнт).
+          NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
         run: npm run build
 
       - uses: actions/upload-pages-artifact@v3
