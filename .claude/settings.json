@@ -1,0 +1,42 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm -v)",
+      "Bash(curl -sI https://registry.npmjs.org --max-time 8)",
+      "Bash(npx -y create-next-app@latest . --ts --tailwind --eslint --app --src-dir --no-import-alias --turbopack --skip-install)",
+      "Bash(mkdir -p public)",
+      "Bash(mv \"Group 3 \\(1\\).png\" public/logo.png)",
+      "Bash(npx -y create-next-app@latest flowers_tmp --ts --tailwind --eslint --app --src-dir --no-import-alias --turbopack --skip-install)",
+      "Bash(cp -rn flowers_tmp/. flowers/)",
+      "Bash(rm -rf flowers_tmp)",
+      "Bash(npm pkg *)",
+      "Bash(npm install *)",
+      "Bash(node -e \"const p=require\\('./package.json'\\);console.log\\(JSON.stringify\\({...p.dependencies,...p.devDependencies},null,1\\)\\)\")",
+      "Bash(rm -f public/file.svg public/globe.svg public/next.svg public/vercel.svg public/window.svg)",
+      "Bash(rm -f test-1519225421980-715cb0215aed.jpg test-1511795409834-ef04bbd61622.jpg test-1518176258769-f227c798150e.jpg test-1453904300235-0f2f60b15b5d.jpg test-1496661269814-a841e78df103.jpg test-1495434224324-36812b391125.jpg test-1488928741225-2aaf732c96cc.jpg)",
+      "Bash(mv test-1520763185298-1b434c919102.jpg tulip-pink.jpg)",
+      "Bash(mv test-1525310072745-f49212b5ac6d.jpg iris-minimal.jpg)",
+      "Bash(mv test-1487530811176-3780de880c2d.jpg bouquet-lush.jpg)",
+      "Bash(mv test-1465146344425-f00d5f5c8f07.jpg field-poppies.jpg)",
+      "Bash(cd /home/dev/my_projects/fable/flowers && rm src/app/globals.css src/app/page.tsx src/app/layout.tsx && ls src/app)",
+      "Bash(npm run *)",
+      "Bash(npx eslint *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3199)",
+      "Bash(node -e \"try{console.log\\(require.resolve\\('playwright'\\)\\)}catch\\(e\\){console.log\\('no playwright'\\)}\")",
+      "Bash(timeout 60 chromium --headless --disable-gpu --no-sandbox --hide-scrollbars --window-size=1440,2400 --virtual-time-budget=12000 --screenshot=/tmp/flowers-top.png http://localhost:3199)",
+      "Bash(mkdir -p ~/flowers-shots)",
+      "Bash(timeout 90 chromium --headless --disable-gpu --no-sandbox --hide-scrollbars --window-size=1440,2400 --virtual-time-budget=15000 --screenshot=/home/dev/flowers-shots/top.png http://localhost:3199)",
+      "Bash(npm i *)",
+      "Bash(node scripts/shoot.mjs)",
+      "Bash(node scripts/shoot2.mjs)",
+      "Bash(node -e ' *)",
+      "Bash(fuser -k 3199/tcp)",
+      "Bash(fuser 3199/tcp)",
+      "Bash(curl -s http://localhost:3199)",
+      "Bash(npx next *)"
+    ],
+    "additionalDirectories": [
+      "/home/dev/my_projects/fable/flowers/src/app"
+    ]
+  }
+}
